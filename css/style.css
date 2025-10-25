@@ -2405,4 +2405,11 @@ html {
         padding: 8px;
     }
 }
+.contact .col-sm-8 {
+    background-color: white !important;
+    position: relative !important;
+    z-index: 10 !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+}
 
