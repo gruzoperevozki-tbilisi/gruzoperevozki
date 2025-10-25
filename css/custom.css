@@ -47,3 +47,12 @@
         width: 95% !important;
     }
 }
+.testimonial-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial.owl-carousel {
+    height: auto !important;
+    min-height: 300px; /* Установите минимальную высоту, чтобы избежать схлопывания */
+}
