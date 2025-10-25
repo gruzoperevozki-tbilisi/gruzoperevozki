@@ -32,3 +32,21 @@
     border-radius: 6px !important;
     font-size: 18px !important;
 }
+/* === ФИНАЛЬНОЕ ИСПРАВЛЕНИЕ: Белый фон для формы === */
+.section.contact .col-sm-8 {
+    background-color: white !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 767px) {
+    .section.contact .col-sm-8 {
+        padding: 20px !important;
+        margin: 0 auto !important;
+        width: 95% !important;
+    }
+}
