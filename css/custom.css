@@ -47,3 +47,16 @@
         width: 95% !important;
     }
 }
+/* ФИКС БЕЛОГО ФОНА */
+body { background: #fff !important; }
+section { background: #fff !important; }
+.section { background: #fff !important; }
+.feature.section, 
+.about.section, 
+.service.section, 
+.portfolio-wrap.section, 
+.team.section, 
+.home-blog.section, 
+.contact.section { 
+    background: #fff !important; 
+}
