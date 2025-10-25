@@ -50,3 +50,21 @@
 .contact-form button:hover {
     background-color: #cc0000;
 }
+/* === Исправление белого фона для контактной формы === */
+.section.contact .col-sm-8 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 767px) {
+    .section.contact .col-sm-8 {
+        padding: 20px;
+        margin: 0 auto;
+        width: 95%;
+    }
+}
