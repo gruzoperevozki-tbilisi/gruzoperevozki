@@ -1,25 +1,26 @@
-
 <!doctype html>
 <html class="no-js" lang="ru">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JCN99FSR4L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCN99FSR4L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JCN99FSR4L');
+    </script>
 
-  gtag('config', 'G-JCN99FSR4L');
-</script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="грузчики Тбилиси">
-    <meta name="description" content="Закажите услуги профессиональных грузчиков в Тбилиси. Быстрая погрузка, выгрузка, перевозка мебели и техники. Низкие цены. Работаем ежедневно.">
-    <meta name="keywords" content="грузоперевозки, грузчики, Тбилиси, Грузия, Transport Geo">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
+    <meta name="author" content="Transport Geo">
+    <meta name="description" content="Профессиональные грузчики в Тбилиси. Быстрая погрузка, переезды под ключ, упаковка вещей, вывоз мусора. Низкие цены. Работаем 24/7. Transport Geo!">
+    <meta name="keywords" content="грузчики тбилиси, услуги грузчиков, квартирный переезд тбилиси, перевозка вещей, transport geo">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- Page Title -->
-    <title>Грузчики Тбилиси | грузоперевозки | переезды </title>
+    <title>Грузчики Тбилиси | Переезды под ключ | Transport Geo</title>
 
     <!-- Favicon Icon -->
     <link rel="icon" href="img/favicon.png">
@@ -35,11 +36,11 @@
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org ",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Transport Geo",
-      "url": "https://gruzoperevozki-tbilisi.github.io/gruzchiki/ ",
-      "logo": "https://gruzoperevozki-tbilisi.github.io/gruzchiki/img/logo.png ",
+      "url": "https://gruzoperevozki-tbilisi.github.io/gruzchiki/",
+      "logo": "https://gruzoperevozki-tbilisi.github.io/gruzchiki/img/logo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "ул. Руставели, 10",
@@ -58,20 +59,533 @@
       "areaServed": "Грузия",
       "sameAs": [
         "https://www.facebook.com/gruzoperevozki.tbilisi/",
-        "https://www.instagram.com/transport.geo/ "
+        "https://www.instagram.com/transport.geo/"
       ]
     }
     </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PJT43PP4');</script>
-<!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJT43PP4');</script>
 </head>
 <body>
 
+<!-- Подключение Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Telegram Floating Button (слева) -->
+<style>
+  .telegram-float-left {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0088cc;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    animation: bounce 2s ease infinite;
+  }
+  .telegram-float-left:hover { transform: translateX(5px); }
+  .telegram-tooltip-left {
+    position: fixed;
+    left: 80px;
+    bottom: 25px;
+    background-color: #0088cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 999;
+  }
+  .telegram-tooltip-left::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #0088cc transparent #0088cc #0088cc;
+  }
+  .telegram-float-left:hover + .telegram-tooltip-left {
+    opacity: 1;
+    visibility: visible;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  @media (max-width: 768px) {
+    .telegram-tooltip-left { display: none; }
+    .telegram-float-left { width: 50px; height: 50px; font-size: 22px; }
+  }
+</style>
+<a href="https://t.me/Allrttt" target="_blank" class="telegram-float-left" title="Написать в Telegram">
+  <i class="fab fa-telegram-plane"></i>
+</a>
+<div class="telegram-tooltip-left">@Allrttt<br>+995 558 242 910</div>
+
+<!-- WhatsApp Floating Button -->
+<style>
+  .whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  .whatsapp-float:hover { background-color: #1EBF56; }
+  .whatsapp-float img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+  }
+</style>
+<a href="https://wa.me/995558242910" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  Написать в WhatsApp
+</a>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader-wave"></div>
+</div>
+
+<!-- Site Header -->
+<header class="site-header">
+  <div class="container header-wrap">
+    <div class="site-branding">
+      <span class="site-title"><a href="index.html">TRANSPORT GEO</a></span>
+    </div>
+    <nav class="primary-nav">
+      <ul class="primary-nav-list nav">
+        <li class="menu-item"><a href="#home">Главная</a></li>
+        <li class="menu-item"><a href="#about">О нас</a></li>
+        <li class="menu-item"><a href="#service">Услуги</a></li>
+        <li class="menu-item"><a href="#work">Работы</a></li>
+        <li class="menu-item"><a href="#team">Команда</a></li>
+        <li class="menu-item"><a href="gruzoperevozki-tbilisi-batumi.html">Тбилиси — Батуми</a></li>
+        <li class="menu-item"><a href="Uslugi.html">Грузоперевозки</a></li>
+        <li class="menu-item"><a href="#blog">Блог</a></li>
+        <li class="menu-item"><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero text-center" id="home">
+  <div class="single-slide parallax" style="background-image: url(img/hero-bg.jpg);">
+    <div class="container">
+      <h3 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">ПРОФЕССИОНАЛЬНЫЕ ГРУЗЧИКИ В ТБИЛИСИ</h3>
+      <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">ГРУЗЧИКИ • ПЕРЕЕЗДЫ • УПАКОВКА • ФИКСИРОВАННАЯ ЦЕНА</h1>
+      <h3 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Переезды по Тбилиси и Грузии. Срочно? Звоните!</h3>
+      <div class="hero-btn-wrap text-center">
+        <a href="tel:+995558242910" class="hero-btn">ВЫЗВАТЬ ГРУЗЧИКОВ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Section -->
+<section class="feature section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="single-feature">
+          <i class="icofont icofont-people"></i>
+          <h3>УСЛУГИ ГРУЗЧИКОВ</h3>
+          <p>Опытные специалисты аккуратно погрузят и разгрузят ваш груз. Работаем быстро и без повреждений.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="single-feature">
+          <i class="icofont icofont-home"></i>
+          <h3>КВАРТИРНЫЕ ПЕРЕЕЗДЫ</h3>
+          <p>Переезд «под ключ»: от упаковки до расстановки мебели. Без лишнего стресса.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="single-feature">
+          <i class="icofont icofont-boxed"></i>
+          <h3>УПАКОВКА И КОРОБКИ</h3>
+          <p>Продаём и предоставляем материалы: коробки, плёнку, уголки, одеяла.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="single-feature">
+          <i class="icofont icofont-trash"></i>
+          <h3>ВЫВОЗ МУСОРА</h3>
+          <p>Строительный и бытовой мусор после ремонта или переезда — уберём за вас.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="single-feature">
+          <i class="icofont icofont-truck"></i>
+          <h3>ГРУЗОПЕРЕВОЗКИ ПО ГРУЗИИ</h3>
+          <p>От Тбилиси до Батуми и обратно. Современные машины, страховка груза.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="single-feature">
+          <i class="icofont icofont-key"></i>
+          <h3>ПЕРЕЕЗД "ПОД КЛЮЧ"</h3>
+          <p>Мы всё сделаем: демонтаж, транспортировка, сборка, расстановка.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="row about-us">
+      <div class="col-md-6">
+        <div class="about-img">
+          <img src="img/about-img-1.jpg" alt="Грузчики Transport Geo выполняют переезд в Тбилиси">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-details">
+          <h3>О НАС</h3>
+          <h2>НАДЕЖНЫЕ ГРУЗЧИКИ В ТБИЛИСИ</h2>
+          <p><strong>Transport Geo</strong> — это команда профессионалов, которая уже более 5 лет помогает людям и компаниям с переездами и перевозками. Мы знаем, как важно сохранить каждую вещь целой.</p>
+          <p>Наши грузчики проходят обучение, работают аккуратно и пунктуально. Цена известна заранее — никаких скрытых платежей.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row what-we-do">
+      <div class="col-md-6">
+        <div class="about-details">
+          <h3>ЧТО МЫ ДЕЛАЕМ?</h3>
+          <h2>ВАШ КОМФОРТ — НАШ ПРИОРИТЕТ</h2>
+          <p>Мы не просто переносим коробки — мы организуем весь процесс: упаковку, погрузку, транспортировку, разгрузку и даже вывоз мусора.</p>
+          <p>Хотите перевезти квартиру, офис или антиквариат? Обращайтесь — поможем быстро и надёжно!</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-img">
+          <img src="img/about-img-2.jpg" alt="Команда профессиональных грузчиков в Грузии">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Section -->
+<section class="service section" id="service">
+  <div class="container">
+    <div class="section-header white text-center">
+      <h2 style="text-shadow: 
+          -1px -1px 0 #000,  
+           1px -1px 0 #000,
+          -1px  1px 0 #000,
+           1px  1px 0 #000,
+           3px  3px 6px rgba(0, 0, 0, 0.7);">
+        НАШИ УСЛУГИ
+      </h2>
+      <span class="section-separator"></span>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="single-service">
+          <i class="icofont icofont-people"></i>
+          <h3 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">
+            Услуги грузчиков
+          </h3>
+          <p>Погрузка, разгрузка, переноска. Опытные сотрудники, работают бережно.</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="single-service">
+          <i class="icofont icofont-home"></i>
+          <h3 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">
+            Квартирные и офисные переезды
+          </h3>
+          <p>«Под ключ»: упаковка, демонтаж, транспортировка, сборка.</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="single-service">
+          <i class="icofont icofont-boxed"></i>
+          <h3 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">
+            Упаковка и коробки
+          </h3>
+          <p>Продаём и предоставляем качественные материалы для защиты вашего груза.</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="single-service">
+          <i class="icofont icofont-trash"></i>
+          <h3 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">
+            Вывоз мусора
+          </h3>
+          <p>Уберём после ремонта или переезда — выезжайте чистыми руками.</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="single-service">
+          <i class="icofont icofont-truck-alt"></i>
+          <h3 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">
+            Грузоперевозки по Грузии
+          </h3>
+          <p>Тбилиси → Батуми, Кутаиси и другие города. Без задержек, с гарантией.</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="single-service">
+          <i class="icofont icofont-box"></i>
+          <h3 style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">
+            Доставка крупногабаритных грузов
+          </h3>
+          <p>Перевозим пианино, сейфы, холодильники и другую тяжёлую технику.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio-wrap section" id="work">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>НАШИ РАБОТЫ</h2>
+      <span class="section-separator"></span>
+    </div>
+    <div class="portfolio-filter text-center">
+      <ul>
+        <li class="active"><a href="#" data-filter="*">ВСЕ</a></li>
+        <li><a href="#" data-filter=".item-1">Переезды</a></li>
+        <li><a href="#" data-filter=".item-2">Доставка</a></li>
+        <li><a href="#" data-filter=".item-3">Крупногабарит</a></li>
+      </ul>
+    </div>
+    <div class="portfolio gutter-less zoom-gallery">
+      <div class="grid-sizer"></div>
+      <div class="portfolio-item item-1">
+        <a href="img/port-01.jpg" class="item-inner">
+          <img src="img/port-01.jpg" alt="Переезд офиса в Тбилиси">
+          <div class="hover-text">
+            <h3>Переезд офиса</h3>
+            <h4>IT-компания "Tech Solutions"</h4>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-item item-2">
+        <a href="img/port-02.jpg" class="item-inner">
+          <img src="img/port-02.jpg" alt="Доставка техники в бар">
+          <div class="hover-text">
+            <h3>Доставка техники</h3>
+            <h4>Клиент: Бар "Борщ"</h4>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-item item-3">
+        <a href="img/port-03.jpg" class="item-inner">
+          <img src="img/port-03.jpg" alt="Перевозка мебели">
+          <div class="hover-text">
+            <h3>Доставка мебели</h3>
+            <h4>Проект: "Ковилинг на Руставели"</h4>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-item item-1">
+        <a href="img/port-04.jpg" class="item-inner">
+          <img src="img/port-04.jpg" alt="Квартирный переезд">
+          <div class="hover-text">
+            <h3>Переезд квартиры</h3>
+            <h4>Клиент: Анна М.</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team section" id="team">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>НАША КОМАНДА</h2>
+      <span class="section-separator"></span>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="img/member1.jpg" alt="Водитель-экспедитор">
+            <div class="member-social-btn">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-details">
+            <h3>Георгий К.</h3>
+            <span>Экспедитор</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="img/member2.jpg" alt="Грузчик в Тбилиси">
+            <div class="member-social-btn">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-details">
+            <h3>Александр Н.</h3>
+            <span>Грузчик</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="img/member3.jpg" alt="Логист">
+            <div class="member-social-btn">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-details">
+            <h3>Анна Л.</h3>
+            <span>Логист</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="img/member4.jpg" alt="Упаковщица">
+            <div class="member-social-btn">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-details">
+            <h3>Светлана С.</h3>
+            <span>Упаковщица</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<div class="testimonial-wrap section">
+  <div class="container">
+    <div class="testimonial owl-carousel text-center" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px;">
+      <blockquote>
+        <p style="font-size: 18px; text-shadow: -0.5px -0.5px 0 rgba(0,0,0,0.4), 0.5px -0.5px 0 rgba(0,0,0,0.4), -0.5px 0.5px 0 rgba(0,0,0,0.4), 0.5px 0.5px 0 rgba(0,0,0,0.4);">
+          Transport Geo помог мне перевезти квартиру. Ребята работают очень аккуратно, все вещи приехали в идеальном состоянии. Спасибо за отличную работу!
+        </p>
+        <small>Анна М., частный клиент</small>
+      </blockquote>
+      <blockquote>
+        <p style="font-size: 18px; text-shadow: -0.5px -0.5px 0 rgba(0,0,0,0.4), 0.5px -0.5px 0 rgba(0,0,0,0.4), -0.5px 0.5px 0 rgba(0,0,0,0.4), 0.5px 0.5px 0 rgba(0,0,0,0.4);">
+          Заказывал доставку офисной мебели. Команда справилась за один день, все было сделано четко и в срок. Очень доволен!
+        </p>
+        <small>Георгий К., бизнес-клиент</small>
+      </blockquote>
+      <blockquote>
+        <p style="font-size: 18px; text-shadow: -0.5px -0.5px 0 rgba(0,0,0,0.4), 0.5px -0.5px 0 rgba(0,0,0,0.4), -0.5px 0.5px 0 rgba(0,0,0,0.4), 0.5px 0.5px 0 rgba(0,0,0,0.4);">
+          Перевозила антиквариат из Тбилиси в Батуми. Была приятно удивлена внимательным отношением к моему грузу. Рекомендую!
+        </p>
+        <small>Мариам Т., частный клиент</small>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section class="home-blog section" id="blog">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>ПОЛЕЗНО</h2>
+      <span class="section-separator"></span>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <article class="post">
+          <header class="entry-header">
+            <a href="blog-details-1.html" target="_blank">
+              <img src="img/news1.jpg" alt="Как подготовиться к переезду">
+            </a>
+            <div class="post-details-wrap">
+              <h2 class="entry-title"><a href="blog-details-1.html" target="_blank">Чек-лист перед переездом</a></h2>
+              <div class="byline">
+                <span class="author"><i class="fa fa-user"></i> Transport Geo</span>
+                <span class="posted-on"><span>15 Окт</span> 2023</span>
+              </div>
+            </div>
+          </header>
+          <div class="entry-content">
+            <p>Какие вещи упаковать первыми? Что взять с собой? Читайте наш гид...</p>
+            <a href="blog-details-1.html" class="t-btn t-btn-ex-small read-more-btn" target="_blank">Читать далее</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-6">
+        <article class="post">
+          <header class="entry-header">
+            <a href="blog-details-2.html" target="_blank">
+              <img src="img/new2.jpg" alt="Выбор транспорта">
+            </a>
+            <div class="post-details-wrap">
+              <h2 class="entry-title"><a href="blog-details-2.html" target="_blank">Как выбрать машину для переезда?</a></h2>
+              <div class="byline">
+                <span class="author"><i class="fa fa-user"></i> Transport Geo</span>
+                <span class="posted-on"><span>10 Окт</span> 2023</span>
+              </div>
+            </div>
+          </header>
+          <div class="entry-content">
+            <p>Объясняем, какой объём вам действительно нужен...</p>
+            <a href="blog-details-2.html" class="t-btn t-btn-ex-small read-more-btn" target="_blank">Читать далее</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe Section -->
+<section class="subscribe">
+  <h2>ПОДПИШИТЕСЬ НА АКЦИИ</h2>
+  <form action="#">
+    <input type="email" placeholder="Введите email">
+    <button type="submit" class="t-btn subscribe-btn">Подписаться</button>
   </form>
 </section>
 
@@ -150,7 +664,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="js/vendor/jquery-3.2.0.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<noscript><iframe src="  https://www.googletagmanager.com/ns.html?id=GTM-PJT43PP4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJT43PP4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 </html>
-
